@@ -1,7 +1,7 @@
 
 import re
 import numpy as np
-
+import io
 
 def clean_str(string):
     """
@@ -30,11 +30,11 @@ def load_data_and_labels(positive_data_file, negative_data_file):
     Returns split sentences and labels.
     """
     # Load data from files
-    with open(positive_data_file, "r") as positive_file:
-        positive_examples = [s.strip() for s in positive_file.readlines()]
+    with io.open(positive_data_file, encoding='latin-1') as positive_file:
+        positive_examples = [str(s).strip() for s in positive_file.readlines()]
 
-    with open(negative_data_file, "r") as negative_file:
-        negative_examples = [s.strip() for s in negative_file.readlines()]
+    with io.open(negative_data_file, encoding='latin-1') as negative_file:
+        negative_examples = [str(s).strip() for s in negative_file.readlines()]
 
     # Split by words
     x_text = [clean_str(sent) for sent in positive_examples + negative_examples]

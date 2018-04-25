@@ -102,3 +102,6 @@ ENV/
 
 # idea
 .idea/
+
+# tensorboard summaries and model
+runs/
