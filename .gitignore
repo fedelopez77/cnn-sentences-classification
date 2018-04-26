@@ -105,3 +105,4 @@ ENV/
 
 # tensorboard summaries and model
 runs/
+notebooks/logs/
