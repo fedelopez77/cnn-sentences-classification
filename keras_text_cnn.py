@@ -101,3 +101,18 @@ model.fit(x_train, y_train, batch_size=64, epochs=10, verbose=2)
 score = model.evaluate(x_dev, y_dev, verbose=1)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
+
+
+import matplotlib.pyplot as plt
+
+acc = history.history["acc"]
+val_acc = history.history["val_acc"]
+epochs_axis = range(1,len(acc) + 1)
+
+plt.plot(epochs_axis, acc, 'b--', epochs_axis, val_acc, 'r--')
+
+ax = plt.axes()
+ax.yaxis.set_ytickts([.5, 1.0])
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.show()
