@@ -113,11 +113,11 @@ def grid_search():
     best_l1 = 0
     best_l2 = 0
 
-    embedding_dims = [32, 64, 128, 256]
-    nums_of_filters = [32, 64, 128, 256]
+    embedding_dims = [300, 400, 500]
+    nums_of_filters = [300, 400, 500]
     dropouts = [0.1, 0.2, 0.3, 0.4]
-    l1s = [0.0001, 0.001, 0.01, 0.1]
-    l2s = [0.0001, 0.001, 0.01, 0.1]
+    l1s = [0.0001]
+    l2s = [0.0001]
     for embedding_dim in embedding_dims:
         for num_filters in nums_of_filters:
             for dropout in dropouts:
@@ -128,13 +128,19 @@ def grid_search():
 
                         # Training
                         model.fit(x_train, y_train, batch_size=64, epochs=50, verbose=2, validation_split=0.1,
-                                    callbacks=[EarlyStopping(monitor='val_loss', patience=3, verbose=1)])
+                                  callbacks=[EarlyStopping(monitor='val_loss', patience=3, verbose=1)])
 
                         # Evaluation
                         score = model.evaluate(x_test, y_test, verbose=1)
                         loss, accuracy = score[0], score[1]
 
+                        print("-- Partial Result: Accuracy: {}, Loss: {}".format(accuracy, loss))
+                        print("Parameters: embed: {}, num_filters: {}, dropout: {}, l1: {}, l2: {}".format(
+                            embedding_dim, num_filters, dropout, l1, l2))
+
                         if accuracy > best_accuracy:
+                            print("-------- NEW BEST RESULT --------")
+                            print("previous acc: {}, new accuracy: {}, Loss: {}".format(best_accuracy, accuracy, loss))
                             best_accuracy = accuracy
                             best_loss = loss
                             best_embed = embedding_dim
@@ -143,7 +149,7 @@ def grid_search():
                             best_l1 = l1
                             best_l2 = l2
 
-    print("FINAL RESULTS: Best accuracy: {}".format(best_accuracy))
+    print("FINAL RESULTS: Best accuracy: {}, best loss: {}".format(best_accuracy, best_loss))
     print("Best Embedding: {}\nBest num filter: {}\nBest dropout: {}\nBest L1: {}\nBest L2: {}".format(
             best_embed, best_num_filters, best_dropout, best_l1, best_l2))
 
