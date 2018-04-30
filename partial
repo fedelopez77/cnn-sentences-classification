@@ -1,0 +1,191 @@
+-- Partial Result: Accuracy: 0.7495309568480301, Loss: 0.6201935328864694
+Parameters: embed: 32, num_filters: 32, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7476547842401501, Loss: 0.6389697454660068
+Parameters: embed: 32, num_filters: 32, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7392120075046904, Loss: 0.6941275106809376
+Parameters: embed: 32, num_filters: 32, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7636022515189581, Loss: 0.6396730314052574
+Parameters: embed: 32, num_filters: 32, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7504690433756271, Loss: 0.6695808093945931
+Parameters: embed: 32, num_filters: 64, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7457786118559274, Loss: 0.6874079601402354
+Parameters: embed: 32, num_filters: 64, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7213883677298312, Loss: 0.6752542631934776
+Parameters: embed: 32, num_filters: 64, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7288930579376937, Loss: 0.7323394928819467
+Parameters: embed: 32, num_filters: 64, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7195121953456084, Loss: 0.7541984250353156
+Parameters: embed: 32, num_filters: 128, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.724202626641651, Loss: 0.6834288360253955
+Parameters: embed: 32, num_filters: 128, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.6857410884037698, Loss: 0.7066099371963773
+Parameters: embed: 32, num_filters: 128, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7363977484810419, Loss: 0.718496522581376
+Parameters: embed: 32, num_filters: 128, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.5168855536945766, Loss: 0.6962101033436201
+Parameters: embed: 32, num_filters: 256, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.6613508442776735, Loss: 0.7175757042909876
+Parameters: embed: 32, num_filters: 256, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.6801125702446442, Loss: 0.7686845817887984
+Parameters: embed: 32, num_filters: 256, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.68105065688407, Loss: 0.6871195011693586
+Parameters: embed: 32, num_filters: 256, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7579737338071468, Loss: 0.6745109364641988
+Parameters: embed: 64, num_filters: 32, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7485928707677473, Loss: 0.6439584220775296
+Parameters: embed: 64, num_filters: 32, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7495309567362014, Loss: 0.6331892996523215
+Parameters: embed: 64, num_filters: 32, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7382739214244076, Loss: 0.6671698203006337
+Parameters: embed: 64, num_filters: 32, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7401500938645447, Loss: 0.6694002375146462
+Parameters: embed: 64, num_filters: 64, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7363977488165278, Loss: 0.6779195207815903
+Parameters: embed: 64, num_filters: 64, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7457786118559274, Loss: 0.6417660563345474
+Parameters: embed: 64, num_filters: 64, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7589118197756011, Loss: 0.6372302497752835
+Parameters: embed: 64, num_filters: 64, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7514071294559099, Loss: 0.6781247062486288
+Parameters: embed: 64, num_filters: 128, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7504690433756271, Loss: 0.7023692417323701
+Parameters: embed: 64, num_filters: 128, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7598499061913696, Loss: 0.62613644675958
+Parameters: embed: 64, num_filters: 128, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7382739214244076, Loss: 0.6564338334729479
+Parameters: embed: 64, num_filters: 128, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.757035647503207, Loss: 0.65848199466827
+Parameters: embed: 64, num_filters: 256, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7429643526086217, Loss: 0.6854442397156978
+Parameters: embed: 64, num_filters: 256, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7354596622889306, Loss: 0.6791699621511892
+Parameters: embed: 64, num_filters: 256, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.733583489569222, Loss: 0.7063031136206793
+Parameters: embed: 64, num_filters: 256, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7626641653268467, Loss: 0.6253207199569044
+Parameters: embed: 128, num_filters: 32, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7523452157598499, Loss: 0.6732806014298945
+Parameters: embed: 128, num_filters: 32, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7448405253283302, Loss: 0.6653530541772467
+Parameters: embed: 128, num_filters: 32, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7467166979362101, Loss: 0.6549784707754682
+Parameters: embed: 128, num_filters: 32, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7467166979362101, Loss: 0.6643978056496125
+Parameters: embed: 128, num_filters: 64, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7392120075046904, Loss: 0.6731680848585061
+Parameters: embed: 128, num_filters: 64, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7420262664724246, Loss: 0.7082434416264575
+Parameters: embed: 128, num_filters: 64, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7439024389125617, Loss: 0.6723183137390896
+Parameters: embed: 128, num_filters: 64, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7467166981598673, Loss: 0.6726025969181454
+Parameters: embed: 128, num_filters: 128, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7523452157598499, Loss: 0.6458315388570359
+Parameters: embed: 128, num_filters: 128, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7495309569039443, Loss: 0.6629891410106565
+Parameters: embed: 128, num_filters: 128, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7514071296795671, Loss: 0.6810341574684987
+Parameters: embed: 128, num_filters: 128, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7514071294559099, Loss: 0.6594398448883257
+Parameters: embed: 128, num_filters: 256, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7589118201110868, Loss: 0.6585293558704025
+Parameters: embed: 128, num_filters: 256, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7185741088180112, Loss: 0.696542029309228
+Parameters: embed: 128, num_filters: 256, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7439024392480474, Loss: 0.6484862836619479
+Parameters: embed: 128, num_filters: 256, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7485928705440901, Loss: 0.6325632318099489
+Parameters: embed: 256, num_filters: 32, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7476547844638073, Loss: 0.6726393799173451
+Parameters: embed: 256, num_filters: 32, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7439024392480474, Loss: 0.6826931186733282
+Parameters: embed: 256, num_filters: 32, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7420262666401676, Loss: 0.6414941957475544
+Parameters: embed: 256, num_filters: 32, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7448405255519874, Loss: 0.6636929142989539
+Parameters: embed: 256, num_filters: 64, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7607879924953096, Loss: 0.6364580670172457
+Parameters: embed: 256, num_filters: 64, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7420262663046817, Loss: 0.6710812687650183
+Parameters: embed: 256, num_filters: 64, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7457786118559274, Loss: 0.62349116768667
+Parameters: embed: 256, num_filters: 64, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7476547844638073, Loss: 0.6331573373604894
+Parameters: embed: 256, num_filters: 128, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.754221388591387, Loss: 0.626492535643014
+Parameters: embed: 256, num_filters: 128, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.757035647503207, Loss: 0.6583643877707548
+Parameters: embed: 256, num_filters: 128, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7636022516307867, Loss: 0.6417760037123375
+Parameters: embed: 256, num_filters: 128, dropout: 0.4, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7636022516307867, Loss: 0.613220325777723
+Parameters: embed: 256, num_filters: 256, dropout: 0.1, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7514071293440814, Loss: 0.6263045208986436
+Parameters: embed: 256, num_filters: 256, dropout: 0.2, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.777673546189886, Loss: 0.5940379403098216
+Parameters: embed: 256, num_filters: 256, dropout: 0.3, l1: 0.0001, l2: 0.0001
+--
+-- Partial Result: Accuracy: 0.7579737335834896, Loss: 0.6258649340713672
+Parameters: embed: 256, num_filters: 256, dropout: 0.4, l1: 0.0001, l2: 0.0001
