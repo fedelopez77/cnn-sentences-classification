@@ -1629,3 +1629,4 @@ Epoch 1/50
  - 245s - loss: 0.6950 - acc: 0.5962 - val_loss: 0.6831 - val_acc: 0.7000
 Epoch 2/50
  - 243s - loss: 0.4954 - acc: 0.8371 - val_loss: 0.6445 - val_acc: 0.7396
+Epoch 3/50

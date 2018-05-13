@@ -106,3 +106,6 @@ ENV/
 # tensorboard summaries and model
 runs/
 notebooks/logs/
+
+# private datasets
+datasets/chat.txt

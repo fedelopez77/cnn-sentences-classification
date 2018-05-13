@@ -39,6 +39,9 @@ del x, y, x_shuffled, y_shuffled
 print("Vocabulary Size: {:d}".format(len(vocab_processor.vocabulary_)))
 print("Train/test split: {:d}/{:d}".format(len(y_train), len(y_test)))
 
+print("\n\nX-train instance 0: {}".format(x_train[0]))
+print("\n\nY-train instance 0: {}".format(y_train[0]))
+
 
 def get_model(embedding_dim=128, filter_sizes=(3, 4, 5), num_filters=128, dropout=0.2, l1_reg=0.01, l2_reg=0.01):
 
@@ -154,4 +157,4 @@ def grid_search():
             best_embed, best_num_filters, best_dropout, best_l1, best_l2))
 
 
-grid_search()
+# grid_search()
