@@ -204,7 +204,7 @@ def grid_search():
 
                             # Training
                             model.fit(x_train, y_train, batch_size=256, epochs=50, verbose=2, validation_split=0.1,
-                                      callbacks=[EarlyStopping(monitor='val_acc', patience=3, verbose=1)])
+                                      callbacks=[EarlyStopping(monitor='val_acc', patience=0, verbose=1)])
 
                             # Evaluation
                             score = model.evaluate(x_test, y_test, verbose=1)
