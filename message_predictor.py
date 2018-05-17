@@ -170,64 +170,72 @@ def test_model():
 
 
 def grid_search():
-    file_name = "datasets/50k-chat.txt"
+    file_name = "datasets/chat.txt"
 
     best_accuracy = 0.0
     best_loss = 0.0
 
     best_num_of_words = 0
     best_embed = 0
+    best_filter_size = 0
     best_num_filters = 0
     best_dropout = 0
     best_l1 = 0
     best_l2 = 0
 
-    max_numbers_of_words = [5000, 10000, 15000]
-    embedding_dims = [300, 400, 500]
-    nums_of_filters = [50, 100, 150]
-    dropouts = [0.1]
-    l1s = [0.0001]
-    l2s = [0.0001]
+    # Best result with full chat: accuracy: 0.6559
+    # Parameters: num_of_words: 12500, embed: 700, filter_size: (1, 2, 3, 4, 5, 6, 7), num_filters: 50, dropout: 5e-05,
+    # l1: 0, l2: 0
+
+    max_numbers_of_words = [10000, 12500, 15000, 20000]
+    embedding_dims = [600, 700, 800, 900]
+    filter_sizes = [(1, 2, 3, 4, 5, 6, 7)]
+    nums_of_filters = [50, 75, 100, 125]
+    dropouts = [0.00005]
+    l1s = [0]
+    l2s = [0]
 
     for number_of_words in max_numbers_of_words:
         for embedding_dim in embedding_dims:
-            for num_filters in nums_of_filters:
-                for dropout in dropouts:
-                    for l1 in l1s:
-                        for l2 in l2s:
+            for filter_size in filter_sizes:
+                for num_filters in nums_of_filters:
+                    for dropout in dropouts:
+                        for l1 in l1s:
+                            for l2 in l2s:
 
-                            messages, labels = load_data(file_name)
-                            x_train, y_train, x_test, y_test = preprocess_data(messages, labels, number_of_words)
+                                messages, labels = load_data(file_name)
+                                x_train, y_train, x_test, y_test = preprocess_data(messages, labels, number_of_words)
 
-                            model = get_model(embedding_dim=embedding_dim, num_filters=num_filters, dropout=dropout,
-                                              l1_reg=l1, l2_reg=l2)
+                                model = get_model(embedding_dim=embedding_dim, filter_sizes=filter_size, num_filters=num_filters, dropout=dropout,
+                                                  l1_reg=l1, l2_reg=l2)
 
-                            # Training
-                            model.fit(x_train, y_train, batch_size=256, epochs=50, verbose=2, validation_split=0.1,
-                                      callbacks=[EarlyStopping(monitor='val_acc', patience=0, verbose=1)])
+                                # Training
+                                model.fit(x_train, y_train, batch_size=256, epochs=50, verbose=2, validation_split=0.1,
+                                          callbacks=[EarlyStopping(monitor='val_acc', patience=0, verbose=1)])
 
-                            # Evaluation
-                            score = model.evaluate(x_test, y_test, verbose=1)
-                            loss, accuracy = score[0], score[1]
+                                # Evaluation
+                                score = model.evaluate(x_test, y_test, verbose=1)
+                                loss, accuracy = score[0], score[1]
 
-                            print("-- Partial Result: Accuracy: {}, Loss: {}".format(accuracy, loss))
-                            print("Parameters: num_of_words: {}, embed: {}, num_filters: {}".format(
-                                number_of_words, embedding_dim, num_filters))
+                                print("-- Partial Result: Accuracy: {}, Loss: {}".format(accuracy, loss))
+                                print("Parameters: num_of_words: {}, embed: {}, filter_size: {}, num_filters: {}, dropout: {}, l1: {}, l2: {}".format(
+                                    number_of_words, embedding_dim, filter_size, num_filters, dropout, l1, l2))
 
-                            if accuracy > best_accuracy:
-                                print("-------- NEW BEST RESULT --------")
-                                print("previous acc: {}, new accuracy: {}, Loss: {}".format(best_accuracy, accuracy, loss))
-                                best_num_of_words = number_of_words
-                                best_accuracy = accuracy
-                                best_loss = loss
-                                best_embed = embedding_dim
-                                best_num_filters = num_filters
-                                best_dropout = dropout
-                                best_l1 = l1
-                                best_l2 = l2
+                                if accuracy > best_accuracy:
+                                    print("-------- NEW BEST RESULT --------")
+                                    print("previous acc: {}, new accuracy: {}, Loss: {}".format(best_accuracy, accuracy, loss))
+                                    best_num_of_words = number_of_words
+                                    best_accuracy = accuracy
+                                    best_loss = loss
+                                    best_embed = embedding_dim
+                                    best_filter_size = filter_size
+                                    best_num_filters = num_filters
+                                    best_dropout = dropout
+                                    best_l1 = l1
+                                    best_l2 = l2
 
     print("FINAL RESULTS: Best accuracy: {}, best loss: {}".format(best_accuracy, best_loss))
-    print("Best num_of_words: {}, Best Embedding: {}\nBest num filter: {}\nBest dropout: {}\nBest L1: {}\nBest L2: {}".format(best_num_of_words, best_embed, best_num_filters, best_dropout, best_l1, best_l2))
+    print("Best num_of_words: {}, Best Embedding: {}\nBest filter size: {}\nBest num filter: {}\nBest dropout: {}\nBest L1: {}\nBest L2: {}".format(best_num_of_words, best_embed, best_filter_size, best_num_filters, best_dropout, best_l1, best_l2))
 
 
 grid_search()
